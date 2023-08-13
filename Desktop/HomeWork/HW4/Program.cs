@@ -43,5 +43,31 @@ Console.WriteLine($"Сумма цифр в числе {number} равна {resul
 
 // Задача 29: Напишите программу, которая задаёт массив из m 
 // элементов и выводит их на экран.
+/*
+int[] CreateArray(int size)
+{
+    int[] array = new int[size];
 
-int[] CreateWriteArray(int size)
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write("Input a number: ");
+        int number = Convert.ToInt32(Console.ReadLine());
+        array[i] = number;
+    }
+    return array;
+}
+
+void WriteArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+
+    Console.WriteLine();
+}
+
+Console.Write("Input a length of an array: ");
+int length = Convert.ToInt32(Console.ReadLine());
+
+int[] myArray = CreateArray(length);
+WriteArray(myArray);
+*/
