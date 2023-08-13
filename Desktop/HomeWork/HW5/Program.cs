@@ -92,7 +92,7 @@ double[] EnterNewArray(int size)
     for (int i = 0; i < size; i++)
     {
         Console.Write($"Введите элемент массива под индексом {i}: ");
-        array[i] = Convert.ToInt32(Console.ReadLine());
+        array[i] = Convert.ToDouble(Console.ReadLine());
     }
     return array;
 }
@@ -139,6 +139,7 @@ double maxNum = MaxOfArray(myArray);
 Console.WriteLine($"Max number of array is {maxNum}");
 double minNum = MinOfArray(myArray);
 Console.WriteLine($"Min number of array is {minNum}");
+double result = Math.Round(maxNum - minNum, 2);
 
-Console.WriteLine($"The difference between the maximum and the minimum numbers is {maxNum - minNum}.");
+Console.WriteLine($"The difference between the maximum and the minimum numbers is {result}.");
 */
