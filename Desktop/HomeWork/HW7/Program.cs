@@ -1,6 +1,6 @@
 ﻿// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 /*
-double [,] CreateRandom2dArray()
+double[,] CreateRandom2dArray()
 {
     Console.Write("Input a quantity of rows: ");
     int rows = Convert.ToInt32(Console.ReadLine());
@@ -76,7 +76,7 @@ Element(myArray, nrow, ncolumn);
 */
 
 // Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
-
+/*
 int [,] Create2dArray()
 {
     Console.Write("Input a quantity of rows: ");
@@ -105,52 +105,25 @@ void Show(int[,] array)
     }
 }
 
-void WriteArray(double[] array)
-{
-    for(int i = 0; i < array.Length; i++)
-        Console.Write(array[i] + " ");
+void AverageColumn(int[,] array)
+{   
+    float[] avArray = new float[array.GetLength(1)]; 
 
-    Console.WriteLine();
-}
-
-// double[] AverageColumn(int[,] array)
-// {
-//     double[] avArray = new double[array.GetLength(1)];
-//     for (int j = 0; j < array.GetLength(1); j++)
-//     {
-//         for (int i = 0; i < array.GetLength(0); i++)
-//         {
-//             avArray[j] += array[i,j];
-//             avArray[j] /= array.GetLength(0);
-//         }
-//     }
-//     return avArray;
-// }
-
-void CalculateMean(int[,] array)
-{
-    // Вычисленное среднее арифметическое по столбцам
-    // соберём в массив, который и будем выводить
-
-    float[] meanArray = new float[array.GetLength(1)]; // резервируем память под новый массив
-                                                       // количеством столбцов исходного массива
     for (int i = 0; i < array.GetLength(1); i++)
     {
-        for (int r = 0; r < array.GetLength(0); r++)
-            meanArray[i] += array[r, i];
-
-        meanArray[i] /= array.GetLength(0);
+        for (int k = 0; k < array.GetLength(0); k++)
+            avArray[i] += array[k, i];
+            
+        avArray[i] /= array.GetLength(0);
     }
 
-    for (int i = 0; i < meanArray.Length; i++)
-        Console.Write(meanArray[i] + "; ");
+    for (int i = 0; i < avArray.Length; i++)
+        Console.Write(avArray[i] + "; ");
 }
 
 int[,] myArray = Create2dArray();
 Show(myArray);
 Console.WriteLine();
-CalculateMean(myArray);
-
-// double[] averageAr = AverageColumn(myArray);
-// WriteArray(averageAr);
+AverageColumn(myArray);
+*/
 
