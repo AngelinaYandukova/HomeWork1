@@ -20,6 +20,21 @@ double[,] CreateRandom2dArray()
 
     return array;
 }
+
+// Для вывода массива:
+
+void Show(double[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i,j] + " ");
+        Console.WriteLine();
+    }
+}
+
+double[,] myArray = CreateRandom2dArray();
+Show(myArray);
 */
 
 // Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
