@@ -190,7 +190,88 @@ Show2dArray(result);
 
 // Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
 // Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+/*
+int[,,] Create3dArray()
+{
+    Console.Write("input a quantity of fields: ");
+    int fields = Convert.ToInt32(Console.ReadLine());
+    Console.Write("input a quantity of rows: ");
+    int rows = Convert.ToInt32(Console.ReadLine());
+    Console.Write("input a quantity of columns: ");
+    int columns = Convert.ToInt32(Console.ReadLine());
+        
+    int[,,] array = new int[fields, rows, columns];
+    int count = 10;
+    for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < array.GetLength(1); j++)
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                array[i, j, k] += count;
+                count += 3;
+            }
+    return array;
+}
+
+void Show3dArray(int[,,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            for (int k = 0; k < array.GetLength(2); k++)
+            Console.Write($"{array[i, j, k]}({i}, {j}, {k}) ");
+        
+        Console.WriteLine();
+    }
+}
 
 
+int[,,] myArray = Create3dArray();
+Show3dArray(myArray);
+*/
 
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+/*
+int[,] FillSpiralArray()
+{
+    int[,] array = new int[4, 4];
+
+    int temp = 1;
+    int i = 0;
+    int j = 0;
+
+    while (temp <= array.GetLength(0) * array.GetLength(1))
+    {
+        array[i, j] = temp;
+        temp++;
+        if (i <= j + 1 && i + j < array.GetLength(1) - 1)
+            j++;
+        else if (i < j && i + j >= array.GetLength(0) - 1)
+            i++;
+        else if (i >= j && i + j > array.GetLength(1) - 1)
+            j--;
+        else
+            i--;
+    }
+    return array;
+}
+
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] < 10)
+            {
+                Console.Write("0" + array[i, j]);
+                Console.Write(" ");
+            }
+            else Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] myArray = FillSpiralArray();
+PrintArray(myArray);
+*/
